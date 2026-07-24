@@ -2,126 +2,71 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>APK</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-
 body{
-background:#0f172a;
-color:white;
-padding:20px;
+    font-family:Arial;
+    background:#111827;
+    color:#fff;
+    padding:20px;
 }
-
-h1{
-text-align:center;
-font-size:32px;
-margin-bottom:8px;
+h2{
+    text-align:center;
 }
-
-.subtitle{
-text-align:center;
-color:#94a3b8;
-margin-bottom:30px;
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f2937;
+    margin:10px 0;
+    padding:12px 15px;
+    border-radius:10px;
 }
-
-.search{
-width:100%;
-padding:14px;
-border:none;
-border-radius:12px;
-font-size:16px;
-margin-bottom:25px;
-}
-
-.card{
-background:#1e293b;
-border-radius:18px;
-padding:18px;
-margin-bottom:20px;
-box-shadow:0 0 20px rgba(0,0,0,.35);
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-3px);
-}
-
-.icon{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.name{
-font-size:24px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.info{
-color:#cbd5e1;
-margin:4px 0;
-}
-
 .btn{
-display:block;
-text-align:center;
-margin-top:18px;
-padding:14px;
-background:#22c55e;
-color:white;
-font-weight:bold;
-text-decoration:none;
-border-radius:12px;
-font-size:18px;
-}
-
-.btn:hover{
-background:#16a34a;
-}
-
-.footer{
-margin-top:40px;
-text-align:center;
-color:#64748b;
-font-size:14px;
+    background:#22c55e;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>📦 APK</h1>
-<div class="subtitle">
-</div>
+<h2>📦 Kho APK</h2>
 
-<input class="search" placeholder="🔍 Tìm ứng dụng...">
+<div id="list"></div>
 
-<div class="card">
+<script>
 
-<div class="icon">📁</div>
+const apps=[
 
-<div class="name">
-Youtube Vanced
-</div>
+["Vanced","https://drive.google.com/uc?export=download&id=1UWIrPr8kYl-Y67Clq_xw3EN0yhRLISaQ"],
 
+["YouTube","LINK_2"],
 
-<a class="btn"
-href="https://drive.google.com/uc?export=download&id=1UWIrPr8kYl-Y67Clq_xw3EN0yhRLISaQ">
+["Google Maps","LINK_3"],
 
-⬇ TẢI XUỐNG
+["APKPure","LINK_4"]
 
-</a>
+];
 
-</div>
+let html="";
 
-<div class="footer">
+apps.forEach(a=>{
+html+=`
+<div class="item">
+<div>${a[0]}</div>
+<a class="btn" href="${a[1]}">Tải</a>
+</div>`;
+});
 
-© 2026 APK Store
+document.getElementById("list").innerHTML=html;
 
-</div>
+</script>
 
 </body>
 </html>
