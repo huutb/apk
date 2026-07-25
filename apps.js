@@ -1,7 +1,7 @@
 const apps = [
   {
-    name: "ZA",
-    file: "apk/ZArchiver.apk"
+    name: "Vanced 5.6.80.348",
+    file: "apk/Vanced.apk"
   },
   {
     name: "TPMS",
