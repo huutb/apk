@@ -1,11 +1,11 @@
 const apps = [
   {
-    name: "ZArchiver",
+    name: "ZA",
     file: "apk/ZArchiver.apk"
   },
   {
-    name: "APKPure",
-    file: "apk/APKPure.apk"
+    name: "TPMS",
+    file: "apk/TPMS.apk"
   },
   {
     name: "Revanced",
