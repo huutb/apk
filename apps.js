@@ -1,7 +1,7 @@
 const apps = [
   {
     name: "Vanced 5.6.80.348",
-    file: "apk/Vanced.apk"
+    file: "apk/vanced.apk"
   },
   {
     name: "TPMS",
