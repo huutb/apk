@@ -9,7 +9,17 @@ fetch("apps.json", {
     list.innerHTML += `
       <div class="app">
         <div class="name">${app.name}</div>
-        <a href="${app.file}" class="btn" download>Tải xuống</a>
+        const isExternal = app.file.startsWith("http");
+
+list.innerHTML += `
+<div class="app">
+  <div class="name">${app.name}</div>
+  <a href="${app.file}"
+     class="btn"
+     ${isExternal ? 'target="_blank" rel="noopener"' : 'download'}>
+     Tải xuống
+  </a>
+</div>`;
       </div>
     `;
   });
