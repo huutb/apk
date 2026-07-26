@@ -18,12 +18,13 @@ fetch("apps.js?v=" + Date.now())
   .then(code => {
     const s = document.createElement("script");
     s.textContent = code;
-    document.body.appendChild(s);
+    document.head.appendChild(s);
 
     const s2 = document.createElement("script");
-    s2.src = "script.js";
-    document.body.appendChild(s2);
-  });
+    s2.src = "script.js?v=" + Date.now();
+    document.head.appendChild(s2);
+  })
+  .catch(err => console.error("Không tải được apps.js:", err));
 </script>
 </body>
 </html>
