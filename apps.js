@@ -9,6 +9,10 @@ const apps = [
   },
   {
     name: "Revanced",
-    file: "apk/Revanced.apk"
+    file: "https://drive.google.com/file/d/1N9Ik6_-J4kzfYu5fIFk6YqpI0N4n6mt7/view?usp=drivesdk"
+  }
+  {
+    name: "MicroG",
+    file: "https://drive.google.com/file/d/1OhRiLccGe88KtVDQMlhQCLy6GUTFnnfn/view?usp=drivesdk"
   }
 ];
